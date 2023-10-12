@@ -41,6 +41,11 @@ SocketModules.chats.isDnD = async function (socket, uid) {
     return status === 'dnd';
 };
 
+SocketModules.chats.isBRB = async function (socket, uid) {
+    const status = await db.getObjectField(`user:${uid}`, 'status');
+    return status === 'berightback';
+};
+
 SocketModules.chats.newRoom = async function (socket, data) {
     sockets.warnDeprecated(socket, 'POST /api/v3/chats');
 

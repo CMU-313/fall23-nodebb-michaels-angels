@@ -108,6 +108,7 @@ UserObject:
         - online
         - offline
         - dnd
+        - berightback
         - away
       example: online
     flags:
@@ -302,6 +303,7 @@ UserObjectFull:
         - online
         - offline
         - dnd
+        - berightback
         - away
       example: online
     flags:
@@ -532,6 +534,7 @@ UserObjectSlim:
         - online
         - offline
         - dnd
+        - berightback
         - away
       example: online
     postcount:

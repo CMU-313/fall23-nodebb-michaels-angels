@@ -60,6 +60,7 @@ MessageObject:
           enum:
             - online
             - offline
+            - berightback
             - dnd
             - away
         banned:
