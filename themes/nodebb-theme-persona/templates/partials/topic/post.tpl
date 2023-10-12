@@ -81,6 +81,22 @@
         <span class="post-tools">
             <a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
             <a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
+            
+            <button id="endorse" onclick="toggleDisplay('endorserName')">Endorse Reply</button>
+            <div id="endorserName" style="display:none;">
+                Endorsed by {posts.user.username}
+            </div>
+
+            <script>
+                function toggleDisplay(elementId) {
+                    const element = document.getElementById(elementId);
+                    if (element.style.display === 'none' || element.style.display === '') {
+                        element.style.display = 'inline'; // Show the endorser's name
+                    } else {
+                        element.style.display = 'none'; // Hide the endorser's name
+                    }
+                }
+            </script>
         </span>
 
         <!-- IF !reputation:disabled -->

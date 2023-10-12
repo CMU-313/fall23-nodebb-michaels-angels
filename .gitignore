@@ -5,6 +5,7 @@ node_modules/*
 !node_modules/nodebb-plugin-composer-default
 !node_modules/@nodebb
 node_modules/@nodebb/bootswatch
+!node_modules/nodebb-plugin-question-and-answer
 sftp-config.json
 config.json
 jsconfig.json
