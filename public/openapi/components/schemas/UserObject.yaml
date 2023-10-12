@@ -532,6 +532,7 @@ UserObjectSlim:
         - online
         - offline
         - dnd
+        - berightback
         - away
       example: online
     postcount:
