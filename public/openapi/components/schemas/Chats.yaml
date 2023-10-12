@@ -61,6 +61,7 @@ MessageObject:
             - online
             - offline
             - dnd
+            - berightback
             - away
         banned:
           type: boolean

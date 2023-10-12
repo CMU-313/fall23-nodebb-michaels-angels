@@ -539,6 +539,17 @@ describe('Messaging Library', () => {
             });
         });
 
+        it('should return true if user is be right back', (done) => {
+            db.setObjectField(`user:${mocks.users.herp.uid}`, 'status', 'berightback', (err) => {
+                assert.ifError(err);
+                socketModules.chats.isBRB({ uid: mocks.users.foo.uid }, mocks.users.herp.uid, (err, isBRB) => {
+                    assert.ifError(err);
+                    assert(isBRB);
+                    done();
+                });
+            });
+        });
+
         it('should fail to load recent chats with invalid data', (done) => {
             socketModules.chats.getRecentChats({ uid: mocks.users.foo.uid }, null, (err) => {
                 assert.equal(err.message, '[[error:invalid-data]]');
