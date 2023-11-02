@@ -85,4 +85,4 @@ jobs:
       - name: Run ESLint
         run: npm run lint
       - name: Run stylelint 
-        uses: actions-hub/stylelint@master
+        run: npx stylelint "**/*.css"
