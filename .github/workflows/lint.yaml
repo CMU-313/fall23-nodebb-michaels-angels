@@ -84,7 +84,7 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
-      - name: Install stylelint 
-        run: npm init stylelint
+      - name: Install stylelint config
+        run: npm install stylelint-config-standard --save-dev
       - name: Run stylelint
         run: npx stylelint "**/*.css"
