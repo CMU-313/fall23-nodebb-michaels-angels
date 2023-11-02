@@ -45,7 +45,10 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: '16'
+      - name: Check Node.js Version
+        run: node --version
+    
 
       - name: NPM Install
         uses: bahmutov/npm-install@v1
@@ -81,3 +84,12 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
+
+      - name: Install stylelint config
+        run: npm install stylelint-config-standard --save-dev
+      
+      - name: Rewrite .stylelintrc.json
+        run: curl https://raw.githubusercontent.com/CMU-313/fall23-nodebb-michaels-angels/integrate_stylelint/.stylelintrc.json > .stylelintrc.json
+
+      - name: Run stylelint
+        run: npx stylelint "**/*.css"
