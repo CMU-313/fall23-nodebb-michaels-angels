@@ -6,6 +6,9 @@ node_modules/*
 !node_modules/@nodebb
 node_modules/@nodebb/bootswatch
 !node_modules/nodebb-plugin-question-and-answer
+!node_modules/stylelint-config-standard
+!node_modules/stylelint
+!node_modules/stylelint-config-recommended
 sftp-config.json
 config.json
 jsconfig.json
